@@ -42,6 +42,9 @@ namespace nsK2EngineLow {
 			DXGI_FORMAT_UNKNOWN,
 			DXGI_FORMAT_UNKNOWN,
 		};	//レンダリングするカラーバッファのフォーマット。
+		AnimationClip* animationClips = nullptr;
+		int numAnimationClips = 0;
+		Animation* animation = nullptr;
 	};
 	/// <summary>
 	/// マテリアルを再初期化するためのデータ。
@@ -175,6 +178,7 @@ namespace nsK2EngineLow {
 		/// </remark>
 		/// <param name="reInitData">再初期化データ。</param>
 		void ReInitMaterials(MaterialReInitData& reInitData);
+			
 	private:
 		bool m_isInited = false;						//初期化されている？
 		Matrix m_worldMatrix;							//ワールド行列。
@@ -182,5 +186,8 @@ namespace nsK2EngineLow {
 		Skeleton m_skeleton;							//スケルトン。
 		MeshParts m_meshParts;							//メッシュパーツ。
 		EnModelUpAxis m_modelUpAxis = enModelUpAxisY;	//モデルの上方向。
+		AnimationClip* m_animationClips=nullptr;
+		int m_numAnimationClips;
+		Animation m_animation;
 	};
 }

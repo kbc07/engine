@@ -16,7 +16,6 @@ namespace nsK2EngineLow {
 			"error : initData.m_tkmFilePathが指定されていません。"
 		);
 
-
 		if (initData.m_skeleton != nullptr) {
 			//スケルトンが指定されている。
 			m_meshParts.BindSkeleton(*initData.m_skeleton);
@@ -131,4 +130,6 @@ namespace nsK2EngineLow {
 			numInstance
 		);
 	}
+
+
 }
